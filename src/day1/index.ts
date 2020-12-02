@@ -4,7 +4,7 @@ type Nullable<T> = T | null | undefined
 
 function run(): Nullable<number> {
   const nums: number[] = fs
-    .readFileSync('input.txt', 'utf-8')
+    .readFileSync('./input.txt', 'utf-8')
     .split('\n')
     .map((line: string) => Number(line))
   

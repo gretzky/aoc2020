@@ -9,13 +9,13 @@ function counter(): number {
     if (entry === '') {
       break
     }
-    const [range,letter,pw] = entry.split(' ')
-    const [min,max] = range.split('-').map(Number)
-    const pwMin = pw.charAt(min - 1)
-    const pwMax = pw.charAt(max - 1)
+    const [range,letter,pw]: string[] = entry.split(' ')
+    const [min,max]: number[] = range.split('-').map(Number)
+    const pwMin: string = pw.charAt(min - 1)
+    const pwMax: string = pw.charAt(max - 1)
 
-    const letterMatch = pwMin == letter.charAt(0) || pwMax == letter.charAt(0)
-    const indexMismatch = pwMin != pwMax
+    const letterMatch: boolean = pwMin == letter.charAt(0) || pwMax == letter.charAt(0)
+    const indexMismatch: boolean = pwMin != pwMax
 
     if (letterMatch && indexMismatch) {
       correct++
